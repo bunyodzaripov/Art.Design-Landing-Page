@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,400&display=swap');
+
+/* Global style*/
+:root {
+    --Payfair: 'Playfair Display', serif;
+    --Quicksand: 'Quicksand', sans-serif;
+    --Roboto: 'Roboto', sans-serif;
+    --Dark: #3c393d;
+    --exDark: #2b2b2b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: var(--Quicksand);
+}
+
+body {
+    line-height: 1.4;
+    color: var(--Dark);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+}
+
+.active {
+    opacity: 0.5;
+}
+
+
+/* Header style */
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/image/banner-bg.jpg) center/cover no-repeat fixed;
+}
+
+.navbar {
+    background: rgba(26, 25, 25, 0.969);
+    padding: 1.2rem;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation .logo a {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: var(--Payfair);
+    letter-spacing: 1px;
+}
+
+.navbar-nav {
+    padding: 0.8rem 0 0.2rem 0;
+}
+
+.navbar-nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--Roboto);
+    letter-spacing: 3px;
+    font-weight: 500;
+    display: inline-block;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    opacity: 0.7;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding-top: 15rem;
+}
+
+.banner-title {
+    font-size: 5rem;
+    font-family: var(--Payfair);
+    line-height: 1.2;
+}
+
+.banner-title span {
+    color: var(--exDark);
+    font-family: var(--Payfair);
+}
+
+.banner p {
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    font-family: var(--Roboto);
+    text-transform: capitalize;
+    font-weight: 300;
+    word-spacing: 2px;
+}
+
+.banner form {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1.4rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-input {
+    width: 100%;
+    font-family: var(--Roboto);
+    outline: none;
+    padding: 0.6rem 0;
+    border: none;
+}
+
+.search-btn {
+    background: #fff;
+    font-size: 1.2rem;
+    color: var(--Dark);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+}
+
+/* Design section style*/
+.design {
+    padding: 4.5rem 0;
+}
+
+.title {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.title h2 {
+    font-size: 2.4rem;
+    font-family: var(--Payfair);
+}
+
+.title p {
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+
+.design-content {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.design-item {
+    margin: 0;
+    cursor: pointer;
+}
+
+.design-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.design-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.design-img img {
+    transition: all 0.5s ease;
+}
+
+.design-img:hover img {
+    transform: scale(1.2);
+}
+
+.design-img span:first-of-type {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    padding: 0.25rem 1rem;
+}
+
+.design-img span:last-of-type {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    padding: 0.25rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.design-title {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.design-title a {
+    color: var(--Dark);
+    font-family: var(--Payfair);
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+/* Blog section style */
+.blog {
+    padding: 4.5rem 0;
+    background: #EAAB70;
+}
+
+.blog-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.blog-item {
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.blog-img {
+    position: relative;
+}
+
+.blog-img img {
+    height: 50rem;
+}
+
+.blog-img span:first-of-type {
+    position: absolute;
+    bottom: 110px;
+    left: 0px;
+    width: 50%;
+    color: #fff;
+    font-family: var(--Quicksand);
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+.blog-img span:last-of-type {
+    position: absolute;
+    bottom: 110px;
+    right: 0px;
+    width: 50%;
+    color: #fff;
+    font-family: var(--Quicksand);
+    opacity: 0;
+    transition: all 0.5s ease;
+    font-size: 20px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+.blog-span {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-family: var(--Quicksand);
+    font-size: 25px;
+    transition: all 0.5s ease;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.blog-img a {
+    text-decoration: none;
+    color: #EAAB70;
+    font-size: 25px;
+}
+
+
+.blog-item:hover {
+    box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 50%);
+}
+
+.blog-img:hover span {
+    opacity: 100%;
+}
+
+/* About section style */
+.about {
+    padding: 4.5rem 0;
+    background: url(/image/Sci\ Fi\ Astronaut.png) center/cover no-repeat fixed;
+    height: 100vh;
+}
+
+.about-welcome {
+    color: #fff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 0;
+}
+
+.about-img img {
+    border-radius: 2rem;
+    box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 50%);
+}
+
+.about-title {
+    padding-left: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+    box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 50%);
+}
+
+.about-title h1 {
+    text-align: center;
+    font-family: var(--Roboto);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: wheat;
+}
+
+.about-title p {
+    font-family: var(--Payfair);
+    font-size: 22px;
+    color: wheat;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+/* Contact section style*/
+.contact {
+    padding: 4.5rem 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: azure;
+}
+
+.contact-content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+.contact-title h1 {
+    font-family: var(--Roboto);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-title p {
+    font-family: var(--Payfair);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-title a {
+    display: block;
+    text-decoration: none;
+    color: var(--Dark);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 1rem;
+    border: 1px solid azure;
+    box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 50%);
+    color: azure;
+}
+
+.contact-content form {
+    padding: 20px;
+}
+
+.contact-content form input,
+.contact-content form textarea,
+.contact-content form button {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    margin-top: 10px;
+    color: var(--Dark);
+    font-family: var(--Roboto);
+    border: 1px solid azure;
+    box-shadow: 0px 3px 16px 0px rgb(0 0 0 / 50%);
+}
+
+.contact-content form button {
+    width: 49%;
+    cursor: pointer;
+}
+
+.contact-content form button:hover {
+    background-color: var(--Dark);
+    color: white;
+}
+
+/* Colobration section style */
+.colobration {
+    padding: 4.5rem 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.contact-logos {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+}
+
+.contact-logo {
+    font-size: 3rem;
+    font-family: var(--Payfair);
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.contact-logo span {
+    color: var(--exDark);
+    font-family: var(--Payfair);
+}
+
+/* Footer section style */
+.footer {
+    position: relative;
+    background: black;
+    height: 30vh;
+    color: #fff;
+}
+
+
+.footer .navigation {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.footer .navigation .navbar-nav {
+    padding-top: 50px;
+}
+
+.footer p {
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.footer p:hover strong {
+    cursor: pointer;
+}
+
+.footer-search {
+    padding: 30px;
+    border-left: 1px solid white;
+
+}
+
+.footer-search h3 {
+    font-family: var(--Roboto);
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.footer-search input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    margin-top: 10px;
+    color: var(--Dark);
+    font-family: var(--Roboto);
+}
+
+.footer-search p {
+    color: white;
+    position: absolute;
+    top: 55%;
+    right: 0;
+    font-size: 13px;
+    font-weight: 200;
+}
